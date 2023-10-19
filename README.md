@@ -2,7 +2,11 @@
 
 > pip install django
 
-> pip install djangorestframework 
+> pip install djangorestframework
+
+> python manage.py migrate
+
+> python manage.py runserver  
 
 > git init -> project initialization
 
