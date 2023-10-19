@@ -13,3 +13,5 @@
 > git commit -m "project init" -> record all change
 
 > git push origin master ->  send data to github server
+
+> git pull origin master ->  get data from github server 
