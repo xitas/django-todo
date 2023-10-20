@@ -6,7 +6,11 @@
 
 > python manage.py migrate
 
-> python manage.py runserver  
+> python manage.py runserver
+
+ 
+
+## GIT Commands
 
 > git init -> project initialization
 
