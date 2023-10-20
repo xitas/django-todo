@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import generics
 from .serializers import TaskSerializer
 from .models import Task
 
 
 class Viewtask(APIView):
+    
 
     data = {
         "Task1": {
@@ -33,3 +35,11 @@ class Viewtask(APIView):
         task_data['status'] = 'complete'
         return Response(task_data)
 
+
+class Tasks(generics.ListCreateAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
+
+class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
