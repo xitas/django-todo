@@ -37,7 +37,7 @@ class Viewtask(APIView):
 
 
 class Tasks(generics.ListCreateAPIView):
-    queryset = Task.objects.all()
+    queryset = Task.objects.all().order_by('-id')
     serializer_class = TaskSerializer
 
 class TaskDetail(generics.RetrieveUpdateDestroyAPIView):
